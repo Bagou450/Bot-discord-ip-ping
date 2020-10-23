@@ -1,12 +1,13 @@
 { 
     "prefix" : "e!",
+    "token" : "token",
     "embed" : true,
-    "node1" : "IP",
-    "node1name" : "Name",
-    "node2" : "IP",
-    "node2name" : "Name",
-    "node3" : "IP",
-    "node3name" : "Name",
-    "node4" : "IP",
-    "node4name" : "Name"
+    "node1" : "194.99.23.130",
+    "node1name" : "Site internet",
+    "node2" : "51.178.200.214",
+    "node2name" : "Bot discord",
+    "node3" : "5.39.81.205",
+    "node3name" : "Plesk 01",
+    "node4" : "88.198.86.70",
+    "node4name" : "Plesk 02"
 }
