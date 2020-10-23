@@ -13,10 +13,10 @@ var node4 = [config.node4];
 var node4name = [config.node4name];
 
 client.on('ready', () => {
-    let solo = client.guilds.fetch('767845872817799179');
+    let solo = client.guilds.fetch(config.serverid);
     let memberCount = solo.memberCount;
-    let channel4 = client.channels.cache.get('769255992273534976');
-    channel4.messages.fetch("769263422399315969") .then(msg => {
+    let channel4 = client.channels.cache.get(config.chanelid);
+    channel4.messages.fetch(config.messageid) .then(msg => {
         msg.edit("")
     });
     console.log('----------------------------------------------\nBot de Bagou450\nDeveveloper pour Zelkoa\nConnected to ' + client.user.id + '!\nEmbed = ' + config.embed + `\n----------------------------------------------`);
@@ -46,8 +46,8 @@ client.on('ready', () => {
                                                                             .then(function (res3) {
 
 
-                                                                                        let channel2 = client.channels.cache.get('769255992273534976');
-                                                                                        channel2.messages.fetch("769263422399315969")
+                                                                                        let channel2 = client.channels.cache.get(config.chanelid);
+                                                                                        channel2.messages.fetch(config.messageid)
                                                                                             .then(msg => {
                                                                                                 var ladate = new Date()
                                                                                                 if (ladate.getMonth() < 10) {
@@ -95,17 +95,17 @@ client.on('ready', () => {
 
                                                                                                 if (isAlive1 === false) {
 
-                                                                                                    client.users.cache.get("444165634155085824").send(":warning: Il y a un probleme avec le " + node1name + ". " + msgnode1 + " " + res.min + "ms" + "\n Ip du serveur : " + node1);
+                                                                                                    client.users.cache.get(config.ownerid).send(":warning: Il y a un probleme avec le " + node1name + ". " + msgnode1 + " " + res.min + "ms" + "\n Ip du serveur : " + node1);
 
 
                                                                                                 } else if (isAlive2 === false)  {
-                                                                                                client.users.cache.get("444165634155085824").send(":warning: Il y a un probleme avec le " + node2name + ". " + msgnode2 + " " + res1.min + "ms" + "\n Ip du serveur : " + node2);
+                                                                                                client.users.cache.get(config.ownerid).send(":warning: Il y a un probleme avec le " + node2name + ". " + msgnode2 + " " + res1.min + "ms" + "\n Ip du serveur : " + node2);
 
                                                                                                 } else if (isAlive3 === false)  {
-                                                                                        client.users.cache.get("444165634155085824").send(":warning: Il y a un probleme avec le " + node3name + ". " + msgnode3 + " " + res2.min + "ms" + "\n Ip du serveur : " + node3);
+                                                                                        client.users.cache.get(config.ownerid).send(":warning: Il y a un probleme avec le " + node3name + ". " + msgnode3 + " " + res2.min + "ms" + "\n Ip du serveur : " + node3);
 
                                                                                     } else if (isAlive4 === false) {
-                                                                                client.users.cache.get("444165634155085824").send(":warning: Il y a un probleme avec le " + node4name + ". " + msgnode4 + " " + res3.min + "ms" + "\n Ip du serveur : " + node4);
+                                                                                client.users.cache.get(config.ownerid).send(":warning: Il y a un probleme avec le " + node4name + ". " + msgnode4 + " " + res3.min + "ms" + "\n Ip du serveur : " + node4);
 
                                                                             } else {
                                                                         return null;
@@ -198,7 +198,11 @@ client.on("message", async message => {
         if (!message.member.hasPermission('ADMINISTRATOR')) {
             message.reply("Vous n\'avez pas les permissions d\'utiliser cette commande !")
         } else {
-            message.reply(aa);
+            if (config.embed) {
+                message.reply(aa);
+            } else {
+                message.reply('Salut');
+            }
         }
 
     } else{

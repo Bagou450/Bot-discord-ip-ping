@@ -1,13 +1,17 @@
 { 
     "prefix" : "e!",
-    "token" : "token",
+    "token" : "Token du bot",
+    "ownerid" : "Id de votre compte discord",
     "embed" : true,
-    "node1" : "194.99.23.130",
-    "node1name" : "Site internet",
-    "node2" : "51.178.200.214",
-    "node2name" : "Bot discord",
-    "node3" : "5.39.81.205",
-    "node3name" : "Plesk 01",
-    "node4" : "88.198.86.70",
-    "node4name" : "Plesk 02"
+    "serverid" : "Id de votre serveur discord",
+    "chanelid" : "Id du salon ou le statut de vos serveur sera afficher",
+    "messageid" : "Id du message donner par e!bot",
+    "node1" : "Ip serveur 1",
+    "node1name" : "Nom serveur 1",
+    "node2" : "Ip serveur 2",
+    "node2name" : "Nom serveur 2",
+    "node3" : "Ip serveur 3",
+    "node3name" : "Nom serveur 3",
+    "node4" : "Ip serveur 4",
+    "node4name" : "Nom serveur 4"
 }
