@@ -1,0 +1,12 @@
+{ 
+    "prefix" : "e!",
+    "embed" : true,
+    "node1" : "IP",
+    "node1name" : "Name",
+    "node2" : "IP",
+    "node2name" : "Name",
+    "node3" : "IP",
+    "node3name" : "Name",
+    "node4" : "IP",
+    "node4name" : "Name"
+}

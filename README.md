@@ -1,2 +1,0 @@
-# Bot discord ip ping 
- 
