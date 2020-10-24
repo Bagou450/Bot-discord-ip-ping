@@ -1,17 +1,27 @@
 {
-  "name": "botsuperbe",
-  "version": "1.0.0",
-  "description": "",
+  "name": "botping",
+  "version": "0.6.5",
+  "description": "Bot qui ping des serveurs",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "discord.js": "^12.4.0",
+    "express": "^4.17.1",
     "mysql": "^2.18.1",
-    "ping": "^0.3.0"
-  }
+    "ping": "^0.3.0",
+    "yarn": "^1.22.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "e!bot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bagou450/Bot-discord-ip-ping.git"
+  },
+  "author": "Bagou450",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bagou450/Bot-discord-ip-ping/issues"
+  },
+  "homepage": "https://github.com/Bagou450/Bot-discord-ip-ping#readme"
 }
