@@ -13,4 +13,6 @@ Utilisation :
 
 (Si vous voulez modifier le message aller dans le index.js a la ligne 67 si vous utilisez l'embed et a la ligne 93 si vous ne l'utilisez pas)  
 
+Pour changer le temps entre chaque actualisation veuillez modifier le nombre a la ligne 131 (en ms)  
 Pour tout problème voici mon discord --> Bagou450 | Zelkoa + Erusya#0007  
+
