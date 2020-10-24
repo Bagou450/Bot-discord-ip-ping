@@ -1,17 +1,20 @@
-{ 
+{
     "prefix" : "e!",
-    "token" : "Token du bot", //Token de votre bot discord
-    "ownerid" : "70024254660874984999", //Id de votre compte discord
+    "token" : "Token du bot",
+    "ownerid" : "4441155085824",
     "embed" : true,
-    "serverid" : "70024254660874984999", //Id de votre serveur discord
-    "chanelid" : "70024254660874984999", //Id du salon ou le statut de vos serveur sera afficher
-    "messageid" : "70024254660874984999", //Id du message donner par e!bot
-    "node1" : "8.8.8.8", //Ip serveur 1
-    "node1name" : "Nom serveur 1", //Nom serveur 1
-    "node2" : "8.8.8.8", //Ip serveur 2
-    "node2name" : "Nom serveur 2", //Nom serveur 2
-    "node3" : "8.8.8.8", //Ip serveur 3
-    "node3name" : "Nom serveur 3", //Nom serveur 3
-    "node4" : "8.8.8.8", //Ip serveur 4
-    "node4name" : "Nom serveur 4" //Nom serveur 4
+    "serverid" : "7672817799179",
+    "chanelid" : "769255934976",
+    "messageid" : "7692699315969",
+    "statuslink" : "https://google.fr",
+    "node1" : "8.8.8.8",
+    "node1name" : "Nom serveur 1",
+    "node2" : "8.8.8.8",
+    "node2name" : "Nom serveur 2",
+    "node3" : "8.8.8.8",
+    "node3name" : "Nom serveur 3",
+    "node4" : "8.8.8.8",
+    "node4name" : "Nom serveur 4",
+    "cat1name" : "Nom catégorie 1",
+    "cat2name" : "Nom catégorie 2"
 }

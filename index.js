@@ -67,15 +67,15 @@ client.on('ready', () => {
                                                                                                 const testembed = new Discord.MessageEmbed()
                                                                                                     .setColor('#0099ff')
                                                                                                     .setTitle('Statut des serveurs')
-                                                                                                    .setURL('https://erusya.com')
+                                                                                                    .setURL(config.statuslink)
                                                                                                     .addFields(
                                                                                                         {
-                                                                                                            name: ':cloud: — Web',
-                                                                                                            value: msgnode1 + ' • Site Internet : ' + res.min + "ms\n" + msgnode2 + ' • Bot discord : ' + res1.min + 'ms'
+                                                                                                            name: ':cloud: — ' + config.cat1name,
+                                                                                                            value: msgnode1 + ' • ' + config.node1name + ' : ' + res.min + "ms\n" + msgnode2 + ' • ' + config.node2name + ' : ' + res1.min + 'ms'
                                                                                                         },
                                                                                                         {
-                                                                                                            name: ':rocket: — Serveur web',
-                                                                                                            value: msgnode3 + ' • PLESK-01 : ' + res2.min + "ms\n" + msgnode4 + ' • PLESK-02 : ' + res3.min + 'ms'
+                                                                                                            name: ':rocket: — ' + config.cat2name,
+                                                                                                            value: msgnode3 + ' • ' + config.node3name + ' : ' + res2.min + "ms\n" + msgnode4 + ' • ' + config.node4name + ' : ' + res3.min + 'ms'
                                                                                                         },
                                                                                                         {
                                                                                                             name: '\u200B',
@@ -90,23 +90,39 @@ client.on('ready', () => {
                                                                                                 if (config.embed) {
                                                                                                     msg.edit(testembed)
                                                                                                 } else {
-                                                                                                    msg.edit(":cloud:— Web\n    :cloud: • Site Internet : "+msgnode1+" ("+res.min+" ms)\n   :cloud: • Bot discord : "+msgnode2+" ("+res1.min+" ms)\n:rocket:— Serveur web\n    :rocket: • PLESK-01 : "+msgnode3+" ("+res2.min+" ms)\n :rocket: • PLESK-02 : "+msgnode4+" ("+res3.min+" ms)\n\nDernière actualisation le "+today+" à "+heure+":"+minutes+":"+seconds+"\n\n:green_circle: = Service en ligne\n:red_circle: = Service hors ligne");
+                                                                                                    msg.edit(":cloud:— " + config.cat1name + "\n    :cloud: • " + config.node1name + " :  "+msgnode1+" ("+res.min+" ms)\n   :cloud: • " + config.node2name + " : "+msgnode2+" ("+res1.min+" ms)\n:rocket:— " + config.cat2name + "\n    :rocket: • " + config.node3name + " : "+msgnode3+" ("+res2.min+" ms)\n :rocket: • " + config.node4name + " : "+msgnode4+" ("+res3.min+" ms)\n\nDernière actualisation le "+today+" à "+heure+":"+minutes+":"+seconds+"\n\n:green_circle: = Service en ligne\n:red_circle: = Service hors ligne");
                                                                                                 }
 
                                                                                                 if (isAlive1 === false) {
 
                                                                                                     client.users.cache.get(config.ownerid).send(":warning: Il y a un probleme avec le " + node1name + ". " + msgnode1 + " " + res.min + "ms" + "\n Ip du serveur : " + node1);
-
+                                                                                                    if (config.embed) {
+                                                                                                        client.users.cache.get(config.ownerid).send(testembed)
+                                                                                                    } else {
+                                                                                                        client.users.cache.get(config.ownerid).send(":cloud:— " + config.cat1name + "\n    :cloud: • " + config.node1name + " :  "+msgnode1+" ("+res.min+" ms)\n   :cloud: • " + config.node2name + " : "+msgnode2+" ("+res1.min+" ms)\n:rocket:— " + config.cat2name + "\n    :rocket: • " + config.node3name + " : "+msgnode3+" ("+res2.min+" ms)\n :rocket: • " + config.node4name + " : "+msgnode4+" ("+res3.min+" ms)\n\nDernière actualisation le "+today+" à "+heure+":"+minutes+":"+seconds+"\n\n:green_circle: = Service en ligne\n:red_circle: = Service hors ligne");
+                                                                                                    }
 
                                                                                                 } else if (isAlive2 === false)  {
                                                                                                 client.users.cache.get(config.ownerid).send(":warning: Il y a un probleme avec le " + node2name + ". " + msgnode2 + " " + res1.min + "ms" + "\n Ip du serveur : " + node2);
-
+                                                                                                    if (config.embed) {
+                                                                                                        client.users.cache.get(config.ownerid).send(testembed)
+                                                                                                    } else {
+                                                                                                        client.users.cache.get(config.ownerid).send(":cloud:— " + config.cat1name + "\n    :cloud: • " + config.node1name + " :  "+msgnode1+" ("+res.min+" ms)\n   :cloud: • " + config.node2name + " : "+msgnode2+" ("+res1.min+" ms)\n:rocket:— " + config.cat2name + "\n    :rocket: • " + config.node3name + " : "+msgnode3+" ("+res2.min+" ms)\n :rocket: • " + config.node4name + " : "+msgnode4+" ("+res3.min+" ms)\n\nDernière actualisation le "+today+" à "+heure+":"+minutes+":"+seconds+"\n\n:green_circle: = Service en ligne\n:red_circle: = Service hors ligne");
+                                                                                                    }
                                                                                                 } else if (isAlive3 === false)  {
                                                                                         client.users.cache.get(config.ownerid).send(":warning: Il y a un probleme avec le " + node3name + ". " + msgnode3 + " " + res2.min + "ms" + "\n Ip du serveur : " + node3);
-
+                                                                                                    if (config.embed) {
+                                                                                                        client.users.cache.get(config.ownerid).send(testembed)
+                                                                                                    } else {
+                                                                                                        client.users.cache.get(config.ownerid).send(":cloud:— " + config.cat1name + "\n    :cloud: • " + config.node1name + " :  "+msgnode1+" ("+res.min+" ms)\n   :cloud: • " + config.node2name + " : "+msgnode2+" ("+res1.min+" ms)\n:rocket:— " + config.cat2name + "\n    :rocket: • " + config.node3name + " : "+msgnode3+" ("+res2.min+" ms)\n :rocket: • " + config.node4name + " : "+msgnode4+" ("+res3.min+" ms)\n\nDernière actualisation le "+today+" à "+heure+":"+minutes+":"+seconds+"\n\n:green_circle: = Service en ligne\n:red_circle: = Service hors ligne");
+                                                                                                    }
                                                                                     } else if (isAlive4 === false) {
                                                                                 client.users.cache.get(config.ownerid).send(":warning: Il y a un probleme avec le " + node4name + ". " + msgnode4 + " " + res3.min + "ms" + "\n Ip du serveur : " + node4);
-
+                                                                                                    if (config.embed) {
+                                                                                                        client.users.cache.get(config.ownerid).send(testembed)
+                                                                                                    } else {
+                                                                                                        client.users.cache.get(config.ownerid).send(":cloud:— " + config.cat1name + "\n    :cloud: • " + config.node1name + " :  "+msgnode1+" ("+res.min+" ms)\n   :cloud: • " + config.node2name + " : "+msgnode2+" ("+res1.min+" ms)\n:rocket:— " + config.cat2name + "\n    :rocket: • " + config.node3name + " : "+msgnode3+" ("+res2.min+" ms)\n :rocket: • " + config.node4name + " : "+msgnode4+" ("+res3.min+" ms)\n\nDernière actualisation le "+today+" à "+heure+":"+minutes+":"+seconds+"\n\n:green_circle: = Service en ligne\n:red_circle: = Service hors ligne");
+                                                                                                    }
                                                                             } else {
                                                                         return null;
                                                                 }
@@ -199,6 +215,7 @@ client.on("message", async message => {
             message.reply("Vous n\'avez pas les permissions d\'utiliser cette commande !")
         } else {
             if (config.embed) {
+
                 message.reply(aa);
             } else {
                 message.reply('Salut');

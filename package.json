@@ -8,5 +8,10 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.4.0",
+    "mysql": "^2.18.1",
+    "ping": "^0.3.0"
+  }
 }
